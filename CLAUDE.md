@@ -65,5 +65,5 @@
 - 發佈：push 到 `main`，GitHub Pages（root）自動部署
 
 ## 10. 課程規劃（依序製作）
-01 hello-world、02 variables、03 operators、04 conditions、05 loops（已完成）
-06 functions、07 arrays-vectors、08 strings、09 pointers-intro（待做）
+01 hello-world、02 variables、03 operators、04 conditions、05 loops、06 functions（已完成）
+07 arrays-vectors、08 strings、09 pointers-intro（待做）

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>函式｜C++ 入門講義</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="../index.html">← 回目錄</a></nav>
+
+  <h1>函式</h1>
+  <p class="goal">本課學會：用函式（function）把一段程式包起來，需要時再呼叫。</p>
+
+  <h2>先看範例</h2>
+  <pre class="code">#include &lt;iostream&gt;
+
+int square(int x) {
+    return x * x;
+}
+
+void printLine(int n) {
+    for (int i = 0; i &lt; n; i++) {
+        std::cout &lt;&lt; &quot;*&quot;;
+    }
+    std::cout &lt;&lt; std::endl;
+}
+
+int main() {
+    int result = square(5);
+    std::cout &lt;&lt; &quot;5 的平方是 &quot; &lt;&lt; result &lt;&lt; std::endl;
+    printLine(3);
+    printLine(6);
+    return 0;
+}</pre>
+  <pre class="output">5 的平方是 25
+***
+******</pre>
+  <div class="note">其實你已經在用函式了：<code>main</code> 就是一個函式，程式從它開始執行。</div>
+
+  <h2>逐行說明</h2>
+  <ul>
+    <li><code>int square(int x)</code>：函式的樣子是「回傳型別 名稱(參數)」。最前面的 <code>int</code> 表示算完會交回一個整數，括號裡的 <code>int x</code> 是參數（parameter），也就是呼叫時要交給函式的材料。</li>
+    <li><code>return x * x;</code>：把結果交回給呼叫的地方，函式也在這一行結束。</li>
+    <li><code>void</code>：表示函式不交回任何值，只負責做事，例如 <code>printLine</code> 只印出星號。</li>
+    <li><code>square(5)</code>：呼叫函式，5 會被放進 <code>x</code>，算出的 25 再存進 <code>result</code>。</li>
+    <li>同一個函式可以呼叫很多次，<code>printLine(3)</code> 和 <code>printLine(6)</code> 共用同一段程式，只是參數不同。</li>
+  </ul>
+
+  <h2>常見錯誤</h2>
+  <ul>
+    <li>把函式寫在 <code>main</code> 後面，編譯器會報 not declared in this scope。函式要先定義，才能被呼叫（先宣告的寫法之後會學）。</li>
+    <li>有回傳型別的函式忘了 <code>return</code>，程式的結果不確定，編譯器通常也會給出警告。</li>
+    <li>呼叫時參數的數量不對，例如 <code>square()</code> 或 <code>square(1, 2)</code>，會編譯失敗。</li>
+  </ul>
+
+  <h2>練習題</h2>
+  <details><summary>題目 1：寫一個函式 <code>cube</code>，回傳整數的三次方。</summary><p><code>int cube(int x) { return x * x * x; }</code>，呼叫 <code>cube(3)</code> 得到 27。</p></details>
+  <details><summary>題目 2：寫一個函式 <code>isEven</code>，判斷整數是不是偶數。</summary><p><code>bool isEven(int n) { return n % 2 == 0; }</code>。<code>bool</code> 函式回傳 true 或 false，印出時顯示 1 或 0。</p></details>
+  <details><summary>題目 3：寫一個函式 <code>sumTo</code>，回傳 1 加到 n 的總和。</summary><p>在函式裡仿照上一課的迴圈：<code>int sum = 0; for (int i = 1; i &lt;= n; i++) { sum += i; } return sum;</code>。<code>sumTo(10)</code> 得到 55。</p></details>
+
+  <div class="pager">
+    <a href="05-loops.html">← 上一課：迴圈</a>
+    <span></span>
+  </div>
+</div>
+</body>
+</html>

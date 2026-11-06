@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>條件判斷｜C++ 入門講義</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="../index.html">← 回目錄</a></nav>
+
+  <h1>條件判斷</h1>
+  <p class="goal">本課學會：用 if / else 讓程式依條件做不同的事。</p>
+
+  <h2>先看範例</h2>
+  <pre class="code">#include &lt;iostream&gt;
+
+int main() {
+    int score = 75;
+
+    if (score &gt;= 90) {
+        std::cout &lt;&lt; &quot;優等&quot; &lt;&lt; std::endl;
+    } else if (score &gt;= 60) {
+        std::cout &lt;&lt; &quot;及格&quot; &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; &quot;不及格&quot; &lt;&lt; std::endl;
+    }
+    return 0;
+}</pre>
+  <pre class="output">及格</pre>
+  <div class="note">想同時判斷兩個條件，可以用 <code>&amp;&amp;</code>（而且）與 <code>||</code>（或者），之後的練習會用到。</div>
+
+  <h2>逐行說明</h2>
+  <ul>
+    <li><code>if (條件)</code>：條件成立才執行大括號裡的內容。</li>
+    <li><code>else if</code>：前面都不成立時，再檢查下一個條件。</li>
+    <li><code>else</code>：以上都不成立時執行。</li>
+    <li>程式由上往下檢查，遇到第一個成立的就停止，不會再看後面。</li>
+  </ul>
+
+  <h2>常見錯誤</h2>
+  <ul>
+    <li>條件寫成 <code>if (score = 60)</code>，單個 <code>=</code> 是指定，應該用 <code>==</code>。</li>
+    <li>條件順序顛倒：先寫 <code>score &gt;= 60</code> 再寫 <code>&gt;= 90</code>，90 分也會被判成「及格」。</li>
+    <li><code>if (x &gt; 1)</code> 後面直接加分號，會讓大括號裡的內容永遠執行。</li>
+  </ul>
+
+  <h2>練習題</h2>
+  <details><summary>題目 1：把 score 改成 95，會印出什麼？</summary><p>優等。</p></details>
+  <details><summary>題目 2：寫出判斷「年齡大於等於 18」就印出「成年」的程式。</summary><p><code>if (age &gt;= 18) { std::cout &lt;&lt; "成年"; }</code></p></details>
+
+  <div class="pager">
+    <a href="03-operators.html">← 上一課：運算符</a>
+    <a href="05-loops.html">下一課：迴圈 →</a>
+  </div>
+</div>
+</body>
+</html>

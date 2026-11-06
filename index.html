@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C++ 入門講義</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <h1>從零開始，<br>學會 C++</h1>
+      <p class="goal">給完全沒寫過程式的人。每課約 15 分鐘，每個範例都能自己編譯、自己改著玩。</p>
+    </div>
+    <svg viewBox="0 0 160 170" role="img" aria-label="C++ 吉祥物"><circle cx="80" cy="14" r="8" fill="#BEE0F0" stroke="#2A3B55" stroke-width="3"/><path d="M80 22v14" stroke="#2A3B55" stroke-width="3"/><rect x="22" y="36" width="116" height="116" rx="38" fill="#BEE0F0" stroke="#2A3B55" stroke-width="4"/><circle cx="58" cy="78" r="6" fill="#2A3B55"/><circle cx="102" cy="78" r="6" fill="#2A3B55"/><circle cx="44" cy="92" r="8" fill="#FFD9C7"/><circle cx="116" cy="92" r="8" fill="#FFD9C7"/><path d="M68 92q12 12 24 0" fill="none" stroke="#2A3B55" stroke-width="4" stroke-linecap="round"/><text x="80" y="136" text-anchor="middle" font-size="20" font-weight="900" fill="#fff" stroke="#2A3B55" stroke-width=".8" font-family="sans-serif">C++</text></svg>
+  </header>
+
+  <h2>開始之前</h2>
+  <p>你需要一個編譯器（例如 g++ 或 clang++）。範例都使用 C++17，編譯指令是：</p>
+  <pre class="code">g++ -std=c++17 main.cpp -o main
+./main</pre>
+  <pre class="output">（有輸出就代表環境沒問題）</pre>
+
+  <h2>課程目錄</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="tag">入門</span>
+      <h3>Hello, World</h3>
+      <p>寫出、編譯、執行第一支程式</p>
+      <div class="chips"><span>15 分鐘</span><span>附練習題</span></div>
+      <a class="btn" href="lessons/01-hello-world.html">開始 →</a>
+    </div>
+    <div class="card">
+      <span class="tag">基礎</span>
+      <h3>變數與資料型別</h3>
+      <p>int、double、char、bool、string</p>
+      <div class="chips"><span>15 分鐘</span><span>附練習題</span></div>
+      <a class="btn" href="lessons/02-variables.html">開始 →</a>
+    </div>
+    <div class="card">
+      <span class="tag">基礎</span>
+      <h3>運算符</h3>
+      <p>加減乘除、取餘數、比較</p>
+      <div class="chips"><span>15 分鐘</span><span>附練習題</span></div>
+      <a class="btn" href="lessons/03-operators.html">開始 →</a>
+    </div>
+    <div class="card">
+      <span class="tag">流程</span>
+      <h3>條件判斷</h3>
+      <p>用 if / else 讓程式做決定</p>
+      <div class="chips"><span>15 分鐘</span><span>附練習題</span></div>
+      <a class="btn" href="lessons/04-conditions.html">開始 →</a>
+    </div>
+    <div class="card">
+      <span class="tag">流程</span>
+      <h3>迴圈</h3>
+      <p>用 for 與 while 重複做事</p>
+      <div class="chips"><span>20 分鐘</span><span>附練習題</span></div>
+      <a class="btn" href="lessons/05-loops.html">開始 →</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

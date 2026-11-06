@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>運算符｜C++ 入門講義</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="../index.html">← 回目錄</a></nav>
+
+  <h1>運算符</h1>
+  <p class="goal">本課學會：用運算符做計算與比較。</p>
+
+  <h2>先看範例</h2>
+  <pre class="code">#include &lt;iostream&gt;
+
+int main() {
+    int a = 7, b = 2;
+    std::cout &lt;&lt; a + b &lt;&lt; std::endl;   // 加
+    std::cout &lt;&lt; a - b &lt;&lt; std::endl;   // 減
+    std::cout &lt;&lt; a * b &lt;&lt; std::endl;   // 乘
+    std::cout &lt;&lt; a / b &lt;&lt; std::endl;   // 整數除法
+    std::cout &lt;&lt; a % b &lt;&lt; std::endl;   // 餘數
+    std::cout &lt;&lt; 7 / 2.0 &lt;&lt; std::endl; // 有小數的除法
+    std::cout &lt;&lt; (a &gt; b) &lt;&lt; &quot; &quot; &lt;&lt; (a == b) &lt;&lt; std::endl;
+    return 0;
+}</pre>
+  <pre class="output">9
+5
+14
+3
+1
+3.5
+1 0</pre>
+  <div class="note">先記住：<code>/</code> 看「兩邊是不是整數」，兩邊都是整數就是整數除法。</div>
+
+  <h2>逐行說明</h2>
+  <ul>
+    <li><code>/</code>：兩個整數相除，結果還是整數，小數會被捨去，所以 7 / 2 是 3。</li>
+    <li><code>%</code>：取餘數，7 % 2 是 1，常用來判斷奇偶數。</li>
+    <li><code>7 / 2.0</code>：只要有一邊是小數，結果就會保留小數。</li>
+    <li><code>&gt;</code>、<code>==</code>：比較運算，成立印出 1（true），不成立印出 0（false）。</li>
+  </ul>
+
+  <h2>常見錯誤</h2>
+  <ul>
+    <li>把 <code>==</code>（比較）寫成 <code>=</code>（指定），意思完全不同，後面會造成錯誤判斷。</li>
+    <li>以為 <code>7 / 2</code> 會是 3.5，其實是 3。</li>
+    <li>除以 0 會讓程式出錯，計算前要先確認除數不是 0。</li>
+  </ul>
+
+  <h2>練習題</h2>
+  <details><summary>題目 1：<code>10 % 3</code> 是多少？</summary><p>1。10 除以 3 商 3 餘 1。</p></details>
+  <details><summary>題目 2：怎麼讓 <code>5 / 2</code> 得到 2.5？</summary><p>改成 <code>5 / 2.0</code> 或 <code>5.0 / 2</code>。</p></details>
+  <details><summary>題目 3：怎麼判斷整數 n 是偶數？</summary><p><code>n % 2 == 0</code> 成立就是偶數。</p></details>
+
+  <div class="pager">
+    <a href="02-variables.html">← 上一課：變數與資料型別</a>
+    <a href="04-conditions.html">下一課：條件判斷 →</a>
+  </div>
+</div>
+</body>
+</html>

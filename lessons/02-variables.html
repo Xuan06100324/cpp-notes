@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>變數與資料型別｜C++ 入門講義</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="../index.html">← 回目錄</a></nav>
+
+  <h1>變數與資料型別</h1>
+  <p class="goal">本課學會：宣告變數（variable），並選擇正確的型別（type）。</p>
+
+  <h2>先看範例</h2>
+  <pre class="code">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int age = 20;
+    double height = 172.5;
+    char grade = 'A';
+    bool passed = true;
+    std::string name = "小明";
+
+    std::cout &lt;&lt; name &lt;&lt; " " &lt;&lt; age &lt;&lt; " 歲" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "身高 " &lt;&lt; height &lt;&lt; "，等級 " &lt;&lt; grade
+              &lt;&lt; "，通過 " &lt;&lt; passed &lt;&lt; std::endl;
+    return 0;
+}</pre>
+  <pre class="output">小明 20 歲
+身高 172.5，等級 A，通過 1</pre>
+
+  <h2>逐行說明</h2>
+  <ul>
+    <li><code>int</code>：整數。<code>double</code>：有小數的數字。</li>
+    <li><code>char</code>：單一字元，用單引號 <code>'A'</code>。</li>
+    <li><code>bool</code>：只有 <code>true</code> 或 <code>false</code>，印出時會顯示 1 或 0。</li>
+    <li><code>std::string</code>：文字，需要 <code>#include &lt;string&gt;</code>，用雙引號。</li>
+    <li>宣告格式：<code>型別 名稱 = 初始值;</code></li>
+  </ul>
+
+  <h2>常見錯誤</h2>
+  <ul>
+    <li>用 <code>int</code> 存小數，例如 <code>int x = 3.9;</code> 會變成 3，小數被直接捨去。</li>
+    <li>變數沒給初始值就使用，結果不確定。</li>
+    <li>單引號與雙引號混用：<code>char c = "A";</code> 會編譯失敗。</li>
+  </ul>
+
+  <h2>練習題</h2>
+  <details><summary>題目 1：宣告變數記錄你的年齡與身高並印出</summary><p>年齡用 <code>int</code>，身高用 <code>double</code>，再用 <code>std::cout</code> 印出。</p></details>
+  <details><summary>題目 2：<code>int n = 7 / 2;</code> 的結果是多少？</summary><p>3。整數除整數，小數會被捨去。（運算符會在下一個單元教）</p></details>
+
+  <div class="pager">
+    <a href="01-hello-world.html">← 上一課：Hello, World</a>
+    <a href="03-operators.html">下一課：運算符 →</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello, World｜C++ 入門講義</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="../index.html">← 回目錄</a></nav>
+
+  <h1>Hello, World</h1>
+  <p class="goal">本課學會：寫出、編譯並執行第一支 C++ 程式。</p>
+
+  <h2>先看範例</h2>
+  <pre class="code">#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}</pre>
+  <pre class="output">Hello, World!</pre>
+  <p>存成 <code>main.cpp</code>，用 <code>g++ -std=c++17 main.cpp -o main</code> 編譯，再執行 <code>./main</code>。</p>
+
+  <h2>逐行說明</h2>
+  <ul>
+    <li><code>#include &lt;iostream&gt;</code>：引入輸入輸出功能，沒有它就不能用 <code>std::cout</code>。</li>
+    <li><code>int main()</code>：程式從這裡開始執行，每支程式只有一個 <code>main</code>。</li>
+    <li><code>std::cout &lt;&lt; ...</code>：把右邊的內容送到螢幕。<code>&lt;&lt;</code> 可以想成「送往」。</li>
+    <li><code>std::endl</code>：換行。</li>
+    <li><code>return 0;</code>：告訴系統程式正常結束。</li>
+  </ul>
+
+  <h2>常見錯誤</h2>
+  <ul>
+    <li>漏掉結尾的分號 <code>;</code>，編譯器會在附近的行回報 error。</li>
+    <li>寫成 <code>cout</code> 而沒有 <code>std::</code>，會出現 not declared 錯誤。</li>
+    <li>字串用了中文引號 <code>“ ”</code>，必須是半形 <code>" "</code>。</li>
+  </ul>
+
+  <h2>練習題</h2>
+  <details><summary>題目 1：改成印出你的名字</summary><p>把 <code>"Hello, World!"</code> 換成 <code>"我是小明"</code> 即可。</p></details>
+  <details><summary>題目 2：印出兩行文字</summary><p>連續寫兩個 <code>std::cout</code> 敘述，各自以 <code>std::endl</code> 結尾。</p></details>
+
+  <div class="pager">
+    <span></span>
+    <a href="02-variables.html">下一課：變數與資料型別 →</a>
+  </div>
+</div>
+</body>
+</html>

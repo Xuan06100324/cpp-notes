@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>迴圈｜C++ 入門講義</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="../index.html">← 回目錄</a></nav>
+
+  <h1>迴圈</h1>
+  <p class="goal">本課學會：用 for 與 while 讓程式重複執行。</p>
+
+  <h2>先看範例</h2>
+  <pre class="code">#include &lt;iostream&gt;
+
+int main() {
+    for (int i = 1; i &lt;= 5; i++) {
+        std::cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+    }
+    std::cout &lt;&lt; std::endl;
+
+    int sum = 0;
+    int n = 1;
+    while (n &lt;= 100) {
+        sum += n;
+        n++;
+    }
+    std::cout &lt;&lt; &quot;1 到 100 的總和是 &quot; &lt;&lt; sum &lt;&lt; std::endl;
+    return 0;
+}</pre>
+  <pre class="output">1 2 3 4 5 
+1 到 100 的總和是 5050</pre>
+
+  <h2>逐行說明</h2>
+  <ul>
+    <li><code>for (起始; 條件; 變化)</code>：知道要跑幾次時用。<code>i++</code> 就是 i 加 1。</li>
+    <li><code>while (條件)</code>：條件成立就一直重複，適合不確定跑幾次的情況。</li>
+    <li><code>sum += n</code>：等於 <code>sum = sum + n</code>，把 n 累加進 sum。</li>
+    <li><code>n++</code> 讓條件總有一天不成立，否則迴圈永遠停不下來。</li>
+  </ul>
+
+  <h2>常見錯誤</h2>
+  <ul>
+    <li>while 裡忘了更新 n，造成無窮迴圈，可以按 Ctrl+C 強制停止。</li>
+    <li>for 的條件寫成 <code>i &lt; 5</code>，只會印到 4，少跑一次。</li>
+    <li>在迴圈裡重新宣告累加變數，每圈都會被歸零。</li>
+  </ul>
+
+  <h2>練習題</h2>
+  <details><summary>題目 1：用 for 印出 1 到 10。</summary><p><code>for (int i = 1; i &lt;= 10; i++) std::cout &lt;&lt; i &lt;&lt; " ";</code></p></details>
+  <details><summary>題目 2：算出 1 到 10 的總和。</summary><p>仿照範例的 while，把條件改成 <code>n &lt;= 10</code>，答案是 55。</p></details>
+
+  <div class="pager">
+    <a href="04-conditions.html">← 上一課：條件判斷</a>
+    <span></span>
+  </div>
+</div>
+</body>
+</html>
